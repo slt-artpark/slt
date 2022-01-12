@@ -5,11 +5,11 @@ const int n_sensors = 5;
 struct flex_sensor flex_sensors[n_sensors];
 
 void init_flex_sensors() {
-  flex_sensor_init(&flex_sensors[0], A0, R_DIV_0, FLAT_RESISTANCE_0, BEND_RESISTANCE_0)
-  flex_sensor_init(&flex_sensors[0], A1, R_DIV_1, FLAT_RESISTANCE_1, BEND_RESISTANCE_1)
-  flex_sensor_init(&flex_sensors[0], A2, R_DIV_2, FLAT_RESISTANCE_2, BEND_RESISTANCE_2)
-  flex_sensor_init(&flex_sensors[0], A3, R_DIV_3, FLAT_RESISTANCE_3, BEND_RESISTANCE_3)
-  flex_sensor_init(&flex_sensors[0], A4, R_DIV_4, FLAT_RESISTANCE_4, BEND_RESISTANCE_4)
+  flex_sensor_init(&flex_sensors[0], A0, R_DIV_0, FLAT_RESISTANCE_0, BEND_RESISTANCE_0);
+  flex_sensor_init(&flex_sensors[0], A1, R_DIV_1, FLAT_RESISTANCE_1, BEND_RESISTANCE_1);
+  flex_sensor_init(&flex_sensors[0], A2, R_DIV_2, FLAT_RESISTANCE_2, BEND_RESISTANCE_2);
+  flex_sensor_init(&flex_sensors[0], A3, R_DIV_3, FLAT_RESISTANCE_3, BEND_RESISTANCE_3);
+  flex_sensor_init(&flex_sensors[0], A4, R_DIV_4, FLAT_RESISTANCE_4, BEND_RESISTANCE_4);
 }
 
 void setup() {
