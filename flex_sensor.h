@@ -115,4 +115,14 @@ void print_flex_sensors_info(
   Serial.println();
 }
 
+void print_flex_angles(
+  struct flex_sensor* sensors,
+  int n_sensors
+) {
+  for( int i=0; i<n_sensors; i++ ) {
+    Serial.print(sensors->angle + "\t");
+  }
+  Serial.print("\n");
+}
+
 #endif
