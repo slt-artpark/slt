@@ -29,13 +29,11 @@ struct flex_sensor {
 void flex_sensor_init(
   struct flex_sensor* sensor,
   int _pin_no,
-  float _vcc,
   float _r_div,
   float _flat_resistance,
   float _bend_resistance
 ) {
   sensor->pin_no = _pin_no;
-  sensor->vcc = _vcc;
   sensor->r_div = _r_div;
   sensor->flat_resistance = _flat_resistance;
   sensor->bend_resistance = _bend_resistance;
@@ -56,7 +54,6 @@ void flex_sensor_init_with_pin_no(
   flex_sensor_init(
     sensor,
     _pin_no,
-    DEFAULT_VCC,
     DEFAULT_R_DIV,
     DEFAULT_FLAT_RESISTANCE,
     DEFAULT_BEND_RESISTANCE
@@ -120,7 +117,7 @@ void print_flex_angles(
   int n_sensors
 ) {
   for( int i=0; i<n_sensors; i++ ) {
-    Serial.print(sensors->angle + "\t");
+    Serial.print(String(sensors->angle) + "\t");
   }
   Serial.print("\n");
 }
